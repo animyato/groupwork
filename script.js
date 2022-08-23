@@ -17,9 +17,13 @@ import axios from "axios";
             });
             sortedList.sort((a, b) => a.price - b.price);
             console.log(sortedList);
+            let filteredArray = sortedList.filter(product =>product?.title.includes("oil"));
+            console.log(filteredArray);
             console.log(myList);
         }
-        );
+        ).catch(error=>{
+            console.log(error)
+        });
     }
 
 getData();
