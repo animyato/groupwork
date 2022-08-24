@@ -17,10 +17,10 @@ import axios from "axios";
                 })
             });
             sortedList.sort((a, b) => a.price - b.price);
-            console.log(sortedList);
+            console.log("Sorted List: ", sortedList);
             const filteredArray = sortedList.filter(product =>product?.title.toLowerCase().includes("oil"));
-            console.log(filteredArray);
-            console.log(myList);
+            console.log("Filtered Array: ", filteredArray);
+            console.log("Title List: ", myList);
         }
         ).catch(error=>{
             console.log(error)
